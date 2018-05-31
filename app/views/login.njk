@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Portal Unicel</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/my-login.css">
+</head>
+
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="img/logo.jpg">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Login</h4>
+							<form method="post" action="includes/process_login.php" name="login_form">
+
+								<div class="form-group">
+									<label for="email">E-Mail</label>
+
+									<input id="email" type="text" class="form-control" name="email" value="" required autofocus>
+								</div>
+
+								<div class="form-group">
+									<label for="senha">Senha
+										<a href="forgot.php" class="float-right">
+											Esqueceu a senha?
+										</a>
+									</label>
+									<input id="senha" type="password" class="form-control" name="senha"  required data-eye>
+								</div>
+
+								<div class="form-group">
+									<label>
+										<input type="checkbox" name="remember"> Lembrar-me
+									</label>
+
+								</div>
+
+								<div class="form-group no-margin">
+									<input type="submit" value="Login" onClick="formhash(this.form, this.form.password);" class="btn btn-primary btn-block"/>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">Copyright &copy; Ministério Apostólico Sem Fronteiras 2018</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/my-login.js"></script>
+</body>
+
+</html>
