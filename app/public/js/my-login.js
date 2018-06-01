@@ -1,6 +1,6 @@
 $(function() {
 	$("input[type='password'][data-eye]").each(function(i) {
-		let $this = $(this);
+    let $this = $(this);
 
 		$this.wrap($("<div/>", {
 			style: 'position:relative'
@@ -9,7 +9,7 @@ $(function() {
 			paddingRight: 60
 		});
 		$this.after($("<div/>", {
-			html: 'Show',
+			html: 'mostrar',
 			class: 'btn btn-primary btn-sm',
 			id: 'passeye-toggle-'+i,
 			style: 'position:absolute;right:10px;top:50%;transform:translate(0,-50%);padding: 2px 7px;font-size:12px;cursor:pointer;'
@@ -22,14 +22,14 @@ $(function() {
 			$("#passeye-"+i).val($(this).val());
 		});
 		$("#passeye-toggle-"+i).on("click", function() {
-			if($this.hasClass("show")) {
+			if($this.hasClass("mostrar")) {
 				$this.attr('type', 'password');
-				$this.removeClass("show");
+				$this.removeClass("mostrar");
 				$(this).removeClass("btn-outline-primary");
 			}else{
 				$this.attr('type', 'text');
-				$this.val($("#passeye-"+i).val());				
-				$this.addClass("show");
+				$this.val($("#passeye-"+i).val());
+				$this.addClass("mostrar");
 				$(this).addClass("btn-outline-primary");
 			}
 		});
