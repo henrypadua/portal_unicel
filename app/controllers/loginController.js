@@ -22,8 +22,10 @@ module.exports = {
     }
 
     req.session.usuario = usuario;
+
     return req.session.save(() => {
       res.redirect('app/dashboard');
+      req.flash('success', 'Logado com Sucesso!');
     });
   },
 };

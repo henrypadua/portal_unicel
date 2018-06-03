@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>Portal Unicel | </title>
+    <title>Portal Unicel</title>
 
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="/build/css/custom.min.css" rel="stylesheet">
 
+
+  </head>
+  <body class="nav-md">
+    {% block body %}{% endblock %}
     <script src="/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <script src="/vendors/nprogress/nprogress.js"></script>
     <script src="/vendors/Chart.js/dist/Chart.min.js"></script>
@@ -41,8 +45,5 @@
     <script src="/vendors/moment/min/moment.min.js"></script>
     <script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script src="/build/js/custom.min.js"></script>
-  </head>
-  <body class="nav-md">
-    {% block body %}{% endblock %}
   </body>
 </html>
