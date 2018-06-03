@@ -6,26 +6,35 @@ module.exports = {
     return res.render('login/signin');
   },
 
-  async autenticacao(req, res) {
-    const { email, senha } = req.body;
+  async autenticacao(req, res, next) {
+    try {
+      const { email, senha } = req.body;
 
-    const usuario = await Usuario.findOne({ where: { email } });
+      const usuario = await Usuario.findOne({ where: { email } });
 
-    if (!usuario) {
-      req.flash('error', 'Usuário Inexistente!');
-      return res.redirect('back');
+      if (!usuario) {
+        req.flash('error', 'Usuário Inexistente!');
+        return res.redirect('back');
+      }
+
+      if (!await bcrypt.compare(senha, usuario.senha)) {
+        req.flash('error', 'Senha Incorreta!');
+        return res.redirect('back');
+      }
+
+      req.session.usuario = usuario;
+
+      return req.session.save(() => {
+        res.redirect('app/dashboard');
+      });
+    } catch (err) {
+      return next(err);
     }
+  },
 
-    if (!await bcrypt.compare(senha, usuario.senha)) {
-      req.flash('error', 'Senha Incorreta!');
-      return res.redirect('back');
-    }
-
-    req.session.usuario = usuario;
-
-    return req.session.save(() => {
-      res.redirect('app/dashboard');
-      req.flash('success', 'Logado com Sucesso!');
+  logout(req, res) {
+    return req.session.destroy(() => {
+      res.redirect('/');
     });
   },
 };
