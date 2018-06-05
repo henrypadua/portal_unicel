@@ -20,7 +20,7 @@ routes.get('/app/dashboard', dashboardController.index);
 
 routes.use((req, res) => res.render('errors/404'));
 
-routes.post('/autenticacao', loginController.autenticacao);
+routes.post('/', loginController.autenticacao);
 
 routes.use('/app', authMiddleware);
 
