@@ -1,0 +1,99 @@
+<header class="header-main topbar space-sidebar">
+	<div class="container-fluid">
+
+		<div class="logo-principal">
+			<img src="/obz/images/default/logo.png" title="OBZ Pearson">
+		</div>
+
+		<div class="toggle-sidebar">
+			<a href="javascript:void(0);" id="btn-toggle-sidebar" class="waves-btn-hover">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<div class="nav-top">
+			<ul>
+				<li>
+					<a class="toggle-fullscreen tooltip" title="Fullscreen" href="javascript:void(0);">
+						<i class="fa fa-arrows-alt" aria-hidden="true"></i>
+						<span>Fullscreen</span>
+					</a>
+				</li>
+
+				<li>
+					<a class="tooltip" title="Cadastro" href="/obz/modulos_top/cadastro/index.asp">
+						<i class="fa fa-file-text-o" aria-hidden="true"></i>
+						<span>Cadastro</span>
+					</a>
+				</li>
+				<li>
+					<a class="tooltip" title="ANS" href="/obz/modulos_top/ans/index.asp">
+						<i class="fa fa-comments-o" aria-hidden="true"></i>
+						<span>ANS</span>
+					</a>
+				</li>
+				<li>
+					<a class="tooltip" title="Pop-up" href="/obz/modulos_top/popup/index.asp">
+						<i class="fa fa-square" aria-hidden="true"></i>
+						<span>Pop-up</span>
+					</a>
+				</li>
+				<li>
+					<a class="popup-abertura outline-none tooltip" title="Abertura Digitação" href="/obz/modulos_top/abertura/index.asp">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						<span>A. Digitação</span>
+					</a>
+				</li>
+				<li>
+					<a class="popup-treinamento outline-none tooltip" title="Treinamento" href="/obz/modulos_top/treinamento/index.asp">
+						<i class="fa fa-file" aria-hidden="true"></i>
+						<span>Treinamento</span>
+					</a>
+				</li>
+				<li>
+					<a class="tooltip" title="Comunicar" href="/obz/modulos_top/comunicar/index.asp">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<span>Comunicar</span>
+					</a>
+				</li>
+				<li>
+					<a class="profile tooltip" title="Perfil" href="/obz/modulos_top/perfil/index.asp">
+						<img src="/obz/images/fotos/user.png">
+					</a>
+				</li>
+				<li>
+					<a class="tooltip" title="Sair" href="/obz/login/index.asp">
+						<i class="fa fa-sign-out" aria-hidden="true"></i>
+						<span>Sair</span>
+					</a>
+				</li>
+			</ul>
+		</div><!-- .nav-top -->
+	</div><!-- .container-fluid -->
+</header>
+
+<script type="text/javascript">
+	$(document).ready(function(e) {
+	    $('.popup-abertura').magnificPopup({
+	        type: 'iframe',
+	        iframe: {
+	            markup: '<style>.mfp-iframe-holder .mfp-content {max-width:700px;height:550px;}</style>' +
+	                '<div class="mfp-iframe-scaler" >' +
+	                '<div class="mfp-close"></div>' +
+	                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+	                '</div></div>'
+	        },
+	    });
+
+	    $('.popup-treinamento').magnificPopup({
+	        type: 'iframe',
+	        iframe: {
+	            markup: '<style>.mfp-iframe-holder .mfp-content {max-width:700px;height:350px;}</style>' +
+	                '<div class="mfp-iframe-scaler" >' +
+	                '<div class="mfp-close"></div>' +
+	                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+	                '</div></div>'
+	        },
+	    });
+	});
+</script>
