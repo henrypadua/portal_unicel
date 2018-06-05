@@ -1,10 +1,8 @@
 const express = require('express');
 
 const routes = express.Router();
-
 const authMiddleware = require('./middlewares/auth');
 const guestMiddleware = require('./middlewares/guest');
-
 const loginController = require('./controllers/loginController');
 const dashboardController = require('./controllers/dashboardController');
 
@@ -14,15 +12,25 @@ routes.use((req, res, next) => {
   next();
 });
 
+/**
+ * Autenticação
+ */
 routes.get('/', guestMiddleware, loginController.login);
 routes.get('/logout', loginController.logout);
+
+routes.post('/autenticacao', loginController.autenticacao);
+
+/**
+ * DashBoard
+ */
+routes.use('/app', authMiddleware);
+
 routes.get('/app/dashboard', dashboardController.index);
 
+/**
+ * Paginas de Erro
+ */
 routes.use((req, res) => res.render('errors/404'));
-
-routes.post('/', loginController.autenticacao);
-
-routes.use('/app', authMiddleware);
 
 routes.use((err, req, res, _next) => {
   res.status(err.status || 500);

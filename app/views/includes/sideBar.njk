@@ -1,121 +1,119 @@
-{% include 'includes/layoutDefault.njk' %}
-{% block body %}
-<div class="col-md-3 left_col">
-    <div class="left_col scroll-view">
+<!-- https://codepen.io/maggiben/pen/rCIFu -->
+<aside class="sidebar">
+	<div class="logo-sidebar">
+		<a href="./dashboard">
+			<img class="logo-main" src="/img/undlogo.png" title="Portal Unicel">
+			<img class="logo-mini" src="/img/alianca.png" title="Portal Unicel">
+		</a>
+	</div>
 
-        <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title">Gentelella Alela!</a>
-        </div>
+	<div id="leftside-navigation">
+		<ul>
+			<li>
+				<a class="waves-btn-hover current" href="/obz/modulos/dashboard/index.asp">
+					<i class="fa fa-dashboard tooltip" title="Dashboard" aria-hidden="true"></i>
+					<span class="link">Dashboard</span>
+				</a>
+			</li>
 
-        <div class="profile"><!--img_2 -->
-            <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-            </div>
-            <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>Anthony Mutisya</h2>
-            </div>
-        </div>
+      <li class="sub-menu">
+				<a href="javascript:void(0);" class="waves-btn-hover">
+					<i class="fa fa-users tooltip" title="Gente" aria-hidden="true"></i>
+					<span class="link">Pessoas</span>
+					<i class="fa fa-angle-right arrow"></i>
+				</a>
+				<ul>
+					<li><a href="/obz/modulos//index.asp">Membros</a></li>
+					<li><a href="/obz/modulos//index.asp">Visitantes</a></li>
+					<li><a href="/obz/modulos//index.asp">Headcount</a></li>
 
-        <br>
-        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+					<li class="sub-menu-3">
+						<a href="javascript:void(0);" class="waves-btn-hover">
+							<span class="link">Cadastro</span>
+							<i class="fa fa-angle-right arrow"></i>
+						</a>
+						<ul>
+							<li><a href="/obz/modulos//index.asp">Cargo</a></li>
+							<li><a href="/obz/modulos//index.asp">Funcionários</a></li>
+							<li><a href="/obz/modulos//index.asp">Centro de Custo</a></li>
+							<li><a href="/obz/modulos//index.asp">Plano de Saúde</a></li>
+							<li><a href="/obz/modulos//index.asp">Empresas</a></li>
+							<li><a href="/obz/modulos//index.asp">Conta Contábil Gente</a></li>
+							<li><a href="/obz/modulos//index.asp">Dias Úteis</a></li>
+							<li><a href="/obz/modulos//index.asp">Config Controle Headcount</a></li>
+							<li><a href="/obz/modulos//index.asp">Modelo PPR</a></li>
+						</ul>
+					</li>
+					<li><a href="/obz/modulos//index.asp">Dashboard</a></li>
+ 				</ul>
+			</li>
 
-            <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="index.html">Dashboard</a></li>
-                            <li><a href="index2.html">Dashboard2</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="form.html">General Form</a></li>
-                            <li><a href="form_advanced.html">Advanced Components</a></li>
-                            <li><a href="form_validation.html">Form Validation</a></li>
-                            <li><a href="form_wizards.html">Form Wizard</a></li>
-                            <li><a href="form_upload.html">Form Upload</a></li>
-                            <li><a href="form_buttons.html">Form Buttons</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="general_elements.html">General Elements</a></li>
-                            <li><a href="media_gallery.html">Media Gallery</a></li>
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="glyphicons.html">Glyphicons</a></li>
-                            <li><a href="widgets.html">Widgets</a></li>
-                            <li><a href="invoice.html">Invoice</a></li>
-                            <li><a href="inbox.html">Inbox</a></li>
-                            <li><a href="calendar.html">Calendar</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="tables.html">Tables</a></li>
-                            <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="chartjs.html">Chart JS</a></li>
-                            <li><a href="chartjs2.html">Chart JS2</a></li>
-                            <li><a href="morisjs.html">Moris JS</a></li>
-                            <li><a href="echarts.html">ECharts </a></li>
-                            <li><a href="other_charts.html">Other Charts </a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu_section">
-                <h3>Live On</h3>
-                <ul class="nav side-menu">
-                    <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="e_commerce.html">E-commerce</a></li>
-                            <li><a href="e_commerce_backend.html">E-commerce Backend</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="project_detail.html">Project Detail</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
-                            <li><a href="profile.html">Profile</a></li>
-                            <li><a href="real_estate.html">Real Estate</a></li>
+			<li>
+				<a class="waves-btn-hover" href="/obz/modulos//index.asp">
+					<i class="fa fa-money tooltip" title="Receita" aria-hidden="true"></i>
+					<span class="link">Financeiro</span>
+				</a>
+			</li>
 
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="page_404.html">404 Error</a></li>
-                            <li><a href="page_500.html">500 Error</a></li>
-                            <li><a href="coming_soon.html">Coming Soon</a></li>
-                            <li><a href="plain_page.html">Plain Page</a></li>
-                            <li><a href="login.html">Login Page</a></li>
-                            <li><a href="sign_up.html">SignUp Page</a></li>
-                            <li><a href="pricing_tables.html">Pricing Tables</a></li>
+			<li>
+				<a class="waves-btn-hover" href="/obz/modulos//index.asp">
+					<i class="fa fa-calculator tooltip" title="Custos" aria-hidden="true"></i>
+					<span class="link">Custos</span>
+				</a>
+			</li>
 
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
-                </ul>
-            </div>
+			<li class="sub-menu">
+				<a href="javascript:void(0);" class="waves-btn-hover">
+					<i class="fa fa-file-text-o tooltip" title="Capex" aria-hidden="true"></i>
+					<span class="link">Capex</span>
+					<i class="fa fa-angle-right arrow"></i>
+				</a>
+				<ul>
+					<li><a href="/obz/modulos//index.asp">Orçamento</a></li>
+					<li><a href="/obz/modulos//index.asp">Incluir Capex</a></li>
+ 				</ul>
+			</li>
 
-        </div>
+			<li class="sub-menu">
+				<a href="javascript:void(0);" class="sub-nav waves-btn-hover">
+					<i class="fa fa-bars tooltip" title="Projetos" aria-hidden="true"></i>
+					<span class="link">Projetos</span>
+					<i class="fa fa-angle-right arrow"></i>
+				</a>
+				<ul>
+					<li><a href="/obz/modulos//index.asp">Visão Geral</a></li>
+					<li><a href="/obz/modulos//index.asp">Por Funcionário</a></li>
+					<li><a href="/obz/modulos//index.asp">Por Projeto</a></li>
+ 				</ul>
+			</li>
 
-        <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-        </div>
-    </div>
-</div>
-{% endblock %}
+			<li class="sub-menu">
+				<a href="javascript:void(0);" class="sub-nav waves-btn-hover">
+					<i class="fa fa-line-chart tooltip" title="Relatórios/Kpi" aria-hidden="true"></i>
+					<span class="link">Relatórios/Kpi</span>
+					<i class="fa fa-angle-right arrow"></i>
+				</a>
+				<ul>
+					<li><a href="/obz/modulos//index.asp">Base Orçamento</a></li>
+					<li><a href="/obz/modulos//index.asp">Base Custos</a></li>
+					<li><a href="/obz/modulos//index.asp">Base Receitas</a></li>
+					<li><a href="/obz/modulos//index.asp">Base Capex/Plant</a></li>
+					<li><a href="/obz/modulos//index.asp">Base </a></li>
+					<li><a href="/obz/modulos//index.asp">Resumo Área</a></li>
+					<li><a href="/obz/modulos//index.asp">P&L Marca</a></li>
+ 				</ul>
+			</li>
+
+			<li>
+				<a class="" href="/obz/modulos/fluxo/index.asp">
+					<i class="fa fa-clipboard tooltip" title="Fluxo de Aprovação" aria-hidden="true"></i>
+					<span class="link">Fluxo de Aprovação</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</aside>
+
+<script>
+
+</script>
