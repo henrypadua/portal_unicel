@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  {% include 'includes/head.njk' %}
+</head>
+
+<body>
+  <section class="wrapper-page">
+
+    {% include 'includes/header.njk' %}
+    {% include 'includes/sideBar.njk' %}
+
+    <div class="content-page space-sidebar">
+    	 <div class="breadcrumb">
+			   <div class="container-fluid">
+		        		<!--#include virtual="/obz/includes/user.asp"-->
+		    	   <div class="bread-nav">
+						  <ul>
+							 	<li>
+							 		<a href="./dashboard">Pessoas</a>
+							 	</li>
+					        <li class="active">Membros</li>
+					     </ul>
+						 </div>
+					</div><!-- .container-fluid -->
+	      </div><!-- .breadcrumb -->
+
+				<div class="container-fluid">
+					<div class="box-card">
+            {% include 'modulos/form_membros.njk' %}
+            {% include 'modulos/listagem.njk' %}
+
+
+			    </div><!-- .box-card -->
+       </div><!-- .container-fluid -->
+    </div><!-- .content-page -->
+  </section><!-- .wrapper-page -->
+		<!--#include virtual="/obz/includes/footer.asp"-->
+	</body>
+  </html>

@@ -5,6 +5,7 @@ const authMiddleware = require('./middlewares/auth');
 const guestMiddleware = require('./middlewares/guest');
 const loginController = require('./controllers/loginController');
 const dashboardController = require('./controllers/dashboardController');
+const cadastroController = require('./controllers/cadastroController');
 
 routes.use((req, res, next) => {
   res.locals.flashSuccess = req.flash('success');
@@ -26,6 +27,11 @@ routes.post('/autenticacao', loginController.autenticacao);
 routes.use('/app', authMiddleware);
 
 routes.get('/app/dashboard', dashboardController.index);
+
+/**
+ * Cadastros
+ */
+routes.get('/app/modulos', cadastroController.membros);
 
 /**
  * Paginas de Erro

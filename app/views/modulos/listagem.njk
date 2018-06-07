@@ -1,0 +1,76 @@
+﻿<form class="valid rsform">
+    <fieldset>
+        <legend>Listagem</legend>
+
+        <table class="myTable table-fixed center" id="tab-datatable" style="width: 100%;">
+            <thead>
+                <tr>
+                	<th width="200">Nome</th>
+                	<th width="200">Área</th>
+                	<th width="30" class="no-sort">Edit</th>
+                	<th width="30" class="no-sort">Del</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <%
+        		While Not rsListagem.EOF
+        		%>
+                <tr>
+                    <td><%=Server.HTMLEncode(rsListagem("nome"))%></td>
+                    <td><%=Server.HTMLEncode(rsListagem("diretor"))%></td>
+
+                    <td>
+                        <a class="tooltip" title="Edit" href="index.asp?id=<%=rsListagem("id")%>">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a class="tooltip del" title="Del" href="processa.asp?action=del&amp;id=<%=rsListagem("id")%>">
+                            <i class="fa fa-trash-o"></i>
+                        </a>
+                    </td>
+                </tr>
+                <%
+        			rsListagem.MoveNext
+        		Wend
+        		%>
+            </tbody>
+    	</table>
+    </fieldset>
+</form>
+
+<script>
+	$(document).ready(function(){
+	    $('#tab-datatable').DataTable({
+	        "order": [
+	            [ 0, "asc" ],
+	        ],
+			"ordering": 	  true,
+			"paging":   	  true,
+	        "info":     	  true,
+	        "scrollY":        "500px",
+	        "scrollX":        true,
+	        "scrollCollapse": true,
+	        "paging":         true,
+
+	        "lengthMenu": [[20, 30, 50, 80 , -1], [20, 30, 50, 80 , "Tudo"]],
+
+	        columnDefs: [{
+	        	targets: "no-sort",
+	        	orderable: false
+	   	 	}],
+
+	        "language": {
+	            "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json"
+	        },
+	    });
+
+	    $(".del").click(function(e) {
+	        if (!confirm('Você tem certeza que deseja excluir?'))
+	        {
+	        	return false;
+	        }
+	    });
+	});
+</script>
