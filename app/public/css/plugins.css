@@ -39,7 +39,7 @@
     width: 260px;
     height: 100%;
     max-height: 100%;
-    background-color: #3f4a59;
+    background-color: #FFF;
     box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
 }
 
@@ -97,7 +97,7 @@
 	outline: 0;
 	padding: 16px 0 16px 0px;
     font-weight: 400;
-    color: #fff;
+    color: #0b0b0b;
 	-webkit-transition: all 200ms ease-in;
 	-moz-transition: all 200ms ease-in;
 	-o-transition: all 200ms ease-in;
@@ -120,7 +120,7 @@
 	text-decoration: none;
 }
 .sidebar #leftside-navigation ul li a:hover{
-    background-color: #42d6c7;
+    background-color: #74b9ff;
 }
 
 .sidebar #leftside-navigation ul li a span.link{
@@ -182,7 +182,7 @@
 
 .sidebar #leftside-navigation ul li a.current{
     color: #fff;
-    background-color: #33CABB;
+    background-color: #74b9ff;
 }
 
 .count-info-sidebar {
