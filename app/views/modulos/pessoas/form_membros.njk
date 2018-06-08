@@ -1,0 +1,61 @@
+<form class="valid rsform" action="" method="post">
+  <fieldset>
+    <legend>Cadastro</legend>
+    <div class="row">
+
+      <label class="col-md-4">Nome:
+      <input type="text" name="nome" class="fc" required value="">
+      </label>
+
+      <label class="col-md-4">E-Mail:
+      <input type="email" name="email" class="fc validate[required]" value="">
+      </label>
+
+      <label class="col-md-2" id="data_nascimento_aluno">Data de nascimento:
+		    <div class="box-datepeicker date">
+		      <input type="text" name="dtnascimento" class="fc jQueryMask-date validate[required] dadodata" value="" maxlength="10" id="form-validation-field-3">
+		      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+		    </div>
+		  </label>
+
+      <div class="col-md-2">
+			  <div class="radio-checkbox-inline">
+				  <p class="label-text">Sexo:</p>
+					  <label>
+						<input type="radio" name="sexo" value="M" class="validate[required]">Masculino
+						</label>
+
+						<label>
+						<input type="radio" name="sexo" value="F" class="validate[required]">Feminino
+						</label>
+				</div>
+			</div>
+
+      <label class="col-md-2">Estado Civil:
+		    <select name="estado" id="estado" class="fc validate[required] block-endereco-aluno">
+		      <option value="" data-sigla="">Selecione</option>
+			    <option value="1" data-sigla="AC">Solteiro(a)</option>
+			    <option value="2" data-sigla="AL">Casado(a)</option>
+			    <option value="3" data-sigla="AP">Divorciado(a)</option>
+			    <option value="4" data-sigla="AM">Viuvo(a)</option>
+					<option value="5" data-sigla="BA">União Estável</option>
+		    </select>
+		  </label>
+
+      <label class="col-md-2">CPF:
+      <input type="email" name="cfp" class="fc jQueryMask-cpf validate[required]" value="">
+      </label>
+
+      <label class="col-md-2">Telefone:
+      <input type="tel" name="telefone" class="fc jQueryMask-phone_with_ddd validate[required]" value="">
+      </label>
+
+      <label class="col-md-2">Celular:
+      <input type="tel" name="celular" class="fc jQueryMask-sp_celphones validate[required]" value="">
+      </label>
+
+      <button type="submit" class="btn btn-blue btn-right btn-bottom-0">Salvar</button>
+
+    </div>
+  </fieldset>
+</form>

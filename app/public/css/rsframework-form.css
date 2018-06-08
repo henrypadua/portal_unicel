@@ -1,22 +1,4 @@
-﻿/**!
- * @project         RS Framework
- * @version         4.3
- * @date            01/08/2012
- * @last update     06/10/2017
- * @autor           Rogerio Saraceni
- *
-*/
-
-/**============================================================================
- * FORM 	   - @section form
- * FORM JQUERY - @section form jquery
-============================================================================**/
-
-
-
-
-
-/**============================================================================
+﻿/**============================================================================
  * FORM
  *
  * rsform, fieldset, legend
@@ -35,6 +17,10 @@
  *
  * @section form
 */
+
+input:invalid {
+  border: #ff0000;
+}
 
 .rsform {
 	position: relative;
@@ -141,7 +127,7 @@
 	opacity         : 1;
 }
 
-.rsform select.fc{ 
+.rsform select.fc{
 	height: 30px;
 	background-color: #f8f8f8;
 }
@@ -150,9 +136,9 @@
 /* iPhone / mobile webkit */
 @media screen and (max-device-width: 480px) {
 
-	.rsform .fc{ 
+	.rsform .fc{
 	  -webkit-appearance: none;
-	  -moz-appearance: none;	
+	  -moz-appearance: none;
 	}
 
 	.rsform select.fc {
@@ -353,7 +339,7 @@ input[type="search"] {
 
 /**---------------------------------------------------------------------------- *
  * Autosize 3.0.15
- * 
+ *
  * license: MIT
  * http://www.jacklmoore.com/autosize
  *
@@ -372,7 +358,7 @@ input[type="search"] {
  * http://www.apache.org/licenses/LICENSE-2.0
  * http://eternicode.github.io/bootstrap-datepicker/
  * https://github.com/eternicode/bootstrap-datepicker
- * 
+ *
  * @section form jquery
 */
 
@@ -643,7 +629,3 @@ body.rtl .formError .formErrorArrow { margin: -2px 13px 0 0;}
 }
 
 .rsform .fc.clone{ margin-bottom: 5px;}
-
-
-
-

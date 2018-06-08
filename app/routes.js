@@ -31,7 +31,7 @@ routes.get('/app/dashboard', dashboardController.index);
 /**
  * Cadastros
  */
-routes.get('/app/modulos', cadastroController.membros);
+routes.get('/app/modulos/pessoas', cadastroController.membros);
 
 /**
  * Paginas de Erro

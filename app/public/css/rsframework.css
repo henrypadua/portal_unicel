@@ -1,25 +1,13 @@
-﻿/**!
- * @project         RS Framework
- * @version         4.3
- * @date            01/08/2012
- * @last update     06/10/2017
- * @autor           Rogerio Saraceni
- *
-*/
-
-/**============================================================================
+﻿/**============================================================================
  * BASE		   - @section base
  * STRUCTURE   - @section structure
  * ELEMENTS	   - @section elements
 ============================================================================**/
 
 
-
-
-
 /**============================================================================
  * BASE
- * 
+ *
  * normalize
  * box-size
  * clear/clearfix
@@ -408,7 +396,7 @@ CSS hack for responsive videos.
 
 .header-top-fixed .logo{ padding: 5px 0;}
 
-.header-top-fixed .logo img{ 
+.header-top-fixed .logo img{
 	max-height: 70px;
     -webkit-transition-: all 0.25s ease 0s;
     -moz-transition: all 0.25s ease 0s;
@@ -697,10 +685,10 @@ CSS hack for responsive videos.
 
 .top-bar ul     { list-style: none;}
 .top-bar ul li  { position: relative; display: inline-block;}
-.top-bar ul li a{ 
+.top-bar ul li a{
     display: block;
     padding: 5px;
-    color: #fff; 
+    color: #fff;
     border: 1px solid #555;
     border-radius: 4px;
 }
@@ -889,7 +877,7 @@ table.table-nowrap tr td{ white-space: nowrap;}
 /**----------------------------------------------------------------------------
  * tooltipste
  * http://iamceege.github.io/tooltipster/
- * 
+ *
  * @section elements
 */
 
@@ -1368,14 +1356,14 @@ ul.tabs li.active a{ border-bottom: 1px solid #fff; background: #fff; }
     ul.tabs li.active a{
         border-bottom: 1px solid #ddd;
         background: #fff;
-    }   
+    }
 }
 
 @media (max-width: 640px) {
     ul.tabs li a { width: 49.5%;}
 }
 @media (max-width: 380px) {
-    ul.tabs li a{ 
+    ul.tabs li a{
         width: 100%;
         margin-left: 0;
     }
@@ -1390,9 +1378,9 @@ ul.tabs li.active a{ border-bottom: 1px solid #fff; background: #fff; }
     overflow: hidden;
 }
 
-.tab-content{ 
-	padding: 15px; 
-	font-size:12px; 
+.tab-content{
+	padding: 15px;
+	font-size:12px;
 	background: #fff;
 }
 
@@ -1866,7 +1854,7 @@ p.card-text:last-child { margin-bottom: 0;}
 	white-space       : nowrap;
 	visibility        : hidden;
 	background-color  : #000;
-	background-color  : rgba(0, 0, 0, 0.8); 
+	background-color  : rgba(0, 0, 0, 0.8);
 	color             : #fff;
 	text-align        : center;
 	font              : 18px Arial, Helvetica, sans-serif;
