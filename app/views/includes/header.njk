@@ -14,20 +14,20 @@
 		<div class="nav-top">
 			<ul>
 				<li>
-					<a class="toggle-fullscreen tooltip" title="Fullscreen" href="javascript:void(0);">
-						<i class="fas fa-arrows-alt" aria-hidden="true"></i>
+					<a class="toggle-fullscreen" title="Fullscreen" href="javascript:void(0);">
+						<i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
 						<span>Fullscreen</span>
 					</a>
 				</li>
 
 			  <li>
-					<a class="profile tooltip" title="Perfil" href="">
-						<img src="/obz/images/fotos/user.png">
+					<a class="profile" title="Perfil" href="">
+						<img src="/img/nophoto.png">
 					</a>
 				</li>
 				<li>
-					<a class="tooltip" title="Sair" href="/logout">
-						<i class="fas fa-sign-out" aria-hidden="true"></i>
+					<a class="" title="Sair" href="/logout">
+						<i class="fas fa-sign-out-alt" aria-hidden="true"></i>
 						<span>Sair</span>
 					</a>
 				</li>
@@ -37,27 +37,16 @@
 </header>
 
 <script type="text/javascript">
-	$(document).ready(function(e) {
-	    $('.popup-abertura').magnificPopup({
-	        type: 'iframe',
-	        iframe: {
-	            markup: '<style>.mfp-iframe-holder .mfp-content {max-width:700px;height:550px;}</style>' +
-	                '<div class="mfp-iframe-scaler" >' +
-	                '<div class="mfp-close"></div>' +
-	                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-	                '</div></div>'
-	        },
-	    });
-
-	    $('.popup-treinamento').magnificPopup({
-	        type: 'iframe',
-	        iframe: {
-	            markup: '<style>.mfp-iframe-holder .mfp-content {max-width:700px;height:350px;}</style>' +
-	                '<div class="mfp-iframe-scaler" >' +
-	                '<div class="mfp-close"></div>' +
-	                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-	                '</div></div>'
-	        },
-	    });
+$(document).ready(function(e) {
+  $('.popup-abertura').magnificPopup({
+    type: 'iframe',
+    iframe: {
+      markup: '<style>.mfp-iframe-holder .mfp-content {max-width:700px;height:550px;}</style>' +
+              '<div class="mfp-iframe-scaler" >' +
+              '<div class="mfp-close"></div>' +
+              '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+              '</div></div>'
+      },
+    });
 	});
 </script>
