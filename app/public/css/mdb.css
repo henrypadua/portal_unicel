@@ -4437,7 +4437,7 @@ a.waves-effect, a.waves-light {
     .btn.btn-md .fa {
       font-size: 0.8rem; }
   .btn.btn-sm {
-    padding: 0.5rem 1.6rem;
+    padding: 11px 2px;
     font-size: 0.64rem; }
     .btn.btn-sm .fa {
       font-size: 0.7rem; }

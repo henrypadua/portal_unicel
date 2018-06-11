@@ -21,6 +21,7 @@
   text-align: center;
   display: block;
   margin: 0;
+  border-bottom-color: #13313f;
   padding: 10px 2px 10px 2px;
   background-color: #fff;
 }
@@ -64,17 +65,17 @@ outline: none !important;
 }
 
 .sidebar #leftside-navigation ul li a{
-position: relative;
-display: block;
-outline: 0;
-padding: 16px 0 16px 0px;
+  position: relative;
+  display: block;
+  outline: 0;
+  padding: 16px 0 16px 0px;
   font-weight: 400;
-  color: #0b0b0b;
--webkit-transition: all 200ms ease-in;
--moz-transition: all 200ms ease-in;
--o-transition: all 200ms ease-in;
--ms-transition: all 200ms ease-in;
-transition: all 200ms ease-in;
+   color: #0b0b0b;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 .sidebar #leftside-navigation ul li a i{
   display: inline-block;
@@ -88,7 +89,7 @@ transition: all 200ms ease-in;
 }
 .sidebar #leftside-navigation ul li a:hover,
 .sidebar #leftside-navigation ul li a:hover i.arrow{
-color: #fff;
+color: #2980b9;
 text-decoration: none;
 }
 .sidebar #leftside-navigation ul li a:hover{
@@ -98,8 +99,9 @@ text-decoration: none;
 .sidebar #leftside-navigation ul li a span.link{
 display: inline-block;
 width: 60%;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -123,17 +125,18 @@ width: 60%;
 
 /* nivel 2 */
 .sidebar #leftside-navigation ul ul     { display: none;}
-.sidebar #leftside-navigation ul ul li  { background-color: #23313f;}
+.sidebar #leftside-navigation ul ul li  { background-color: #fff;}
 .sidebar #leftside-navigation ul ul li a{
 padding: 10px 20px 10px 45px;
-font-size: 12px;
+font-size: 13px;
+font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
-color: #aeb2b7;
+color: #0b0b0b;
 }
 
 /* nivel 3 */
 .sidebar #leftside-navigation ul ul ul     { display: none;}
-.sidebar #leftside-navigation ul ul ul li  { background: #13313f;}
+.sidebar #leftside-navigation ul ul ul li  { background: #fff;}
 .sidebar #leftside-navigation ul ul ul li a{
 padding: 10px 20px 10px 60px;
 font-size: 11px;
@@ -144,12 +147,12 @@ color: #aeb2b7;
 .sidebar #leftside-navigation ul ul li:hover { background-color: transparent;}
 
 .sidebar #leftside-navigation ul ul li a:hover,
-.sidebar #leftside-navigation ul ul ul li a:hover{ background-color: #34495E;}
+.sidebar #leftside-navigation ul ul ul li a:hover{ background-color: #fff;}
 
 
 .sidebar #leftside-navigation ul li.active ul { display: block;}
 
-.sidebar #leftside-navigation ul li.active > a{ color: #fff; background-color: #3d4853 !important;}
+.sidebar #leftside-navigation ul li.active > a{ color: #fff; background-color: #fff !important;}
 
 
 .sidebar #leftside-navigation ul li a.current{
@@ -184,7 +187,7 @@ color: #aeb2b7;
     width: 150px;
     top: 12px;
     left: 60px;
-    background-color: #23313f;
+    background-color: #fff;
 }
   .sidebar #leftside-navigation ul ul ul{
       position: absolute;
@@ -410,7 +413,7 @@ position: absolute;
 }
 
 .tooltipster-default .tooltipster-content {
-	font-family: Arial, sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 12px;
 	line-height: 14px;
 	padding: 4px 8px;

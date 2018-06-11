@@ -2939,7 +2939,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 0.5rem;
+  padding: 1px 1px;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem;
@@ -6216,6 +6216,8 @@ button.bg-dark:focus {
 
 .clearfix::after {
   display: block;
+  overflow: auto;
+  zoom: 1;
   clear: both;
   content: "";
 }
