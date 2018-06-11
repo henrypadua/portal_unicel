@@ -15,23 +15,17 @@
     	 <div class="breadcrumb">
 			   <div class="container-fluid">
 		    	   <div class="bread-nav">
-						  <ul>
-							 	<li>
-							 		<a href="./dashboard">Pessoas</a>
-							 	</li>
-					        <li class="active">Membros</li>
-					     </ul>
+               <a class="breadcrumb-item" href="./dashboard">Pessoas</a>
+               <a class="breadcrumb-item active">Membros</a>
 						 </div>
 					</div><!-- .container-fluid -->
 	      </div><!-- .breadcrumb -->
 
 				<div class="container-fluid">
-					<div class="box-card">
+					<div class="card">
             {% include 'modulos/pessoas/form_membros.njk' %}
             {% include 'modulos/pessoas/listagem.njk' %}
-
-
-			    </div><!-- .box-card -->
+			    </div>
        </div><!-- .container-fluid -->
     </div><!-- .content-page -->
   </section><!-- .wrapper-page -->
