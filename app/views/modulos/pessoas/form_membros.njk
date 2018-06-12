@@ -3,19 +3,23 @@
         <legend>Dados Pessoais</legend>
 
         <div class="form-row">
+
           <div class="form-group col-md-4">
             <label for="nome">Nome:</label>
             <input type="text" class="form-control" name="nome" required>
+            <div class="invalid-feedback">Por favor digite seu nome.</div>
           </div>
 
           <div class="form-group col-md-4">
             <label for="email">E-mail:</label>
             <input type="email" class="form-control" name="email" required>
+                        <div class="invalid-feedback">Por favor digite seu email.</div>
           </div>
 
           <div class="form-group col-md-2">
             <label for="email">Data de Nascimento:</label>
             <input type="date" class="form-control" name="dtnascimento" required>
+            <div class="invalid-feedback">Por favor digite sua data de nascimento.</div>
           </div>
 
           <div class="form-group col-md-2">
@@ -25,6 +29,7 @@
               <option value="1">Masculino</option>
               <option value="2">Feminino</option>
             </select>
+          <div class="invalid-feedback">Por favor escolha seu sexo.</div>
           </div>
         </div>
 
@@ -39,96 +44,74 @@
             <option value="4">Viuvo(a)</option>
             <option value="5">União Estável</option>
           </select>
+        <div class="invalid-feedback">Por favor escolha seu estado civil.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="cpf">CPF:</label>
           <input type="text" class="form-control cpf" name="cpf">
+          <div class="invalid-feedback">Por favor digite seu CPF.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="telefone">Telefone:</label>
-          <input type="tel" class="form-control tel_ddd" name="telefone" required>
+          <input type="tel" class="form-control tel_ddd" name="telefone">
+          <div class="invalid-feedback">Por favor informe seu telefone.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="celular">Celular:</label>
           <input type="tel" class="form-control cel" name="celular" required>
+          <div class="invalid-feedback">Por favor informe seu celular.</div>
         </div>
-
-        <div class="col-md-1 clearfix">
-          <label></label>
-          <button type="submit" class="btn btn-primary btn-sm form-control">Salvar</button>
-        </div>
-
       </div>
   </fieldset>
-</form>
 
-<form class="needs-validation" novalidate>
   <fieldset>
-        <legend>Endereço</legend>
-
-        <div class="form-row">
-          <div class="form-group col-md-4">
-            <label for="cep">Cep:</label>
-            <input type="tex" class="form-control cep" name="cep" required>
-          </div>
-
-          <div class="form-group col-md-4">
-            <label for="estado">Estado:</label>
-            <input type="text" class="form-control" name="estado" required>
-          </div>
-
-          <div class="form-group col-md-2">
-            <label for="cidade">Cidade:</label>
-            <input type="text" class="form-control" name="cidade" required>
-          </div>
-
-          <div class="form-group col-md-2">
-            <label for="sexo">Sexo:</label>
-            <select name="sexo" class="form-control" required>
-              <option value="" disabled selected>Selecione</option>
-              <option value="1">Masculino</option>
-              <option value="2">Feminino</option>
-            </select>
-          </div>
-        </div>
+    <legend>Endereço</legend>
 
       <div class="form-row">
         <div class="form-group col-md-2">
-          <label for="estadocivil">Estado Civil:</label>
-          <select name="estadocivil" class="form-control" required>
-            <option value="" disabled selected>Selecione</option>
-            <option value="1">Solteiro(a)</option>
-            <option value="2">Casado(a)</option>
-            <option value="3">Divorciado(a)</option>
-            <option value="4">Viuvo(a)</option>
-            <option value="5">União Estável</option>
-          </select>
+          <label for="cep">Cep:</label>
+          <input type="tex" class="form-control cep" name="cep" id="cep" required>
+          <div class="invalid-feedback">Por favor informe seu CEP.</div>
         </div>
 
         <div class="form-group col-md-2">
+          <label for="estado">Estado:</label>
+          <input type="text" class="form-control estado" data-autocomplete-state name="estado" id="estado" required>
+          <div class="invalid-feedback">Por favor informe seu estado.</div>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="cidade">Cidade:</label>
+          <input type="text" class="form-control" data-autocomplete-city name="cidade" id="cidade" required>
+          <div class="invalid-feedback">Por favor informe sua cidade.</div>
+        </div>
+
+        <div class="form-group col-md-5">
           <label for="logradouro">Logradouro:</label>
-          <input type="text" class="form-control" name="logradouro">
+          <input type="text" class="form-control" data-autocomplete-address name="logradouro" id="endereco" required>
+          <div class="invalid-feedback">Por favor informe seu endereço.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="numero">Número:</label>
           <input type="text" class="form-control" name="numero" required>
+          <div class="invalid-feedback">Por favor informe o número de seu endereço.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="bairro">Bairro:</label>
-          <input type="text" class="form-control" name="bairro" required>
+          <input type="text" class="form-control" data-autocomplete-neighborhood name="bairro" id="bairro" required>
+          <div class="invalid-feedback">Por favor informe seu bairro.</div>
         </div>
 
-        <div class="col-md-1 clearfix">
-          <label></label>
-          <button type="submit" class="btn btn-primary btn-sm form-control">Salvar</button>
+        <div class="clear-fix">
+        <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
         </div>
 
-      </div>
+    </div>
   </fieldset>
 </form>
 
@@ -137,6 +120,9 @@
 <!-- /Start your project here-->
 <!-- SCRIPTS -->
 <script>
+			$(function(){
+				$("#cep").autocompleteAddress();
+			});
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
@@ -160,6 +146,7 @@ $(document).ready(function(){
   $('.date').mask('11/11/1111');
   $('.cep').mask('00000-000');
   $('.tel_ddd').mask('(00) 0000-0000');
+  $('.estado').mask('AA');
   $('.cel').mask('(00) 00000-0000');
   $('.cpf').mask('000.000.000-00', {reverse: true});
 });
