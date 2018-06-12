@@ -35,16 +35,42 @@ $(document).ready(function(e) {
       path = path.replace(/\/$/, "");
       path = decodeURIComponent(path);
 
-      $("ul#demo-menu li a").each(function () {
+      $("#leftside-navigation a").each(function () {
           var href = this.href;
           if (path.trim() == href.trim()) {
-              $(this).closest('a').addClass('current-active');
+              $(this).closest('a').addClass('current');
           }
       });
   }
   setNavigation();
 });
 
+$(document).ready(function(){
+	$("#btn-toggle-not").click(function(){
+		$(".toggle-not").toggle();
+	});
+});
+
+function reload(){
+	location.reload();
+}
+
+$(document).ready(function(){
+	$("#btn-toggle-sidebar").click(function(){
+		$(".logo-main").toggleClass("none");
+		$(".logo-mini").toggleClass("inline");
+
+		$(".toggle-sidebar i.fa").toggleClass("sidebar-mini");
+		$(".sidebar").toggleClass("nav-toggle");
+		$(".header-main").toggleClass("space-sidebar-ajust");
+		$(".content-page").toggleClass("space-sidebar-ajust");
+		$(".footer-main").toggleClass("space-sidebar-ajust");
+	});
+
+	// <'% If tela <> "dashboard" Then %>
+	//  $("#btn-toggle-sidebar").click();
+	// <'% End If %>
+});
 
 /**----------------------------------------------------------------------------
 * toggleFullScreen
@@ -83,28 +109,6 @@ $(function() {
   });
 });
 
-$(document).ready(function(){
-	$("#btn-toggle-not").click(function(){
-		$(".toggle-not").toggle();
-	});
-});
-
-function reload(){
-	location.reload();
-}
-
-$(document).ready(function(){
-	$("#btn-toggle-sidebar").click(function(){
-		$(".logo-main").toggleClass("none");
-		$(".logo-mini").toggleClass("inline");
-
-		$(".toggle-sidebar i.fas").toggleClass("sidebar-mini");
-		$(".sidebar").toggleClass("nav-toggle");
-		$(".header-main").toggleClass("space-sidebar-ajust");
-		$(".content-page").toggleClass("space-sidebar-ajust");
-		$(".footer-main").toggleClass("space-sidebar-ajust");
-	});
-});
 /**----------------------------------------------------------------------------
  * Waves
  * http://fian.my.id/Waves
