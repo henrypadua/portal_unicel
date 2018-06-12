@@ -1,0 +1,168 @@
+<form class="needs-validation" novalidate>
+  <fieldset>
+        <legend>Dados Célula</legend>
+
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+            <label for="lider">Líder Principal:</label>
+            <select name="ldier" class="form-control" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="usuarioId">Henry Junior</option>
+              <option value="usuarioId">Christian Max</option>
+            </select>
+            <div class="invalid-feedback">Por favor escolha um líder.</div>
+          </div>
+
+         <div class="form-group col-md-4">
+            <label for="supervisor">Supervisor:</label>
+            <select name="supervisor" class="form-control" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="usuarioId">Henry Junior</option>
+              <option value="usuarioId">Christian Max</option>
+            </select>
+            <div class="invalid-feedback">Por favor escolha um supervisor.</div>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="secretario">Secretário:</label>
+            <select name="secretario" class="form-control" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="usuarioId">Isabelle Pedrosa</option>
+              <option value="usuarioId">Gilma Mendes</option>
+            </select>
+            <div class="invalid-feedback">Por favor escolha um supervisor.</div>
+          </div>
+
+
+
+        </div>
+
+      <div class="form-row">
+
+          <div class="form-group col-md-2">
+            <label for="tpcelula">Tipo de Célula:</label>
+            <select name="tpcelula" class="form-control" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="tipocelulaId">Jovens</option>
+              <option value="tipocelulaId">Crianças</option>
+              <option value="tipocelulaId">Adolescentes</option>
+              <option value="tipocelulaId">Adultos</option>
+            </select>
+            <div class="invalid-feedback">Por favor escolha um tipo de célula.</div>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="diasemana">Dia da Semana:</label>
+            <select name="diasemana" class="form-control" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="2">Segunda-Feira</option>
+              <option value="3">Terça-Feira</option>
+              <option value="4">Quarta-Feira</option>
+              <option value="5">Quinta-Feira</option>
+              <option value="6">Sexta-Feira</option>
+              <option value="7">Sábado</option>
+              <option value="1">Domingo</option>
+            </select>
+            <div class="invalid-feedback">Por favor escolha um dia da semana.</div>
+          </div>
+
+        <div class="form-group col-md-2">
+          <label for="horario">Horário:</label>
+          <input type="text" class="form-control time" name="horario">
+          <div class="invalid-feedback">Por favor digite seu CPF.</div>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="nome">Nome da Célula:</label>
+          <input type="nome" class="form-control" name="nome">
+          <div class="invalid-feedback">Por favor informe o nome da célula.</div>
+        </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Endereço</legend>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="cep">Cep:</label>
+          <input type="tex" class="form-control cep" name="cep" id="cep" required>
+          <div class="invalid-feedback">Por favor informe seu CEP.</div>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="estado">Estado:</label>
+          <input type="text" class="form-control estado" data-autocomplete-state name="estado" id="estado" required>
+          <div class="invalid-feedback">Por favor informe seu estado.</div>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="cidade">Cidade:</label>
+          <input type="text" class="form-control" data-autocomplete-city name="cidade" id="cidade" required>
+          <div class="invalid-feedback">Por favor informe sua cidade.</div>
+        </div>
+
+        <div class="form-group col-md-5">
+          <label for="logradouro">Logradouro:</label>
+          <input type="text" class="form-control" data-autocomplete-address name="logradouro" id="endereco" required>
+          <div class="invalid-feedback">Por favor informe seu endereço.</div>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="numero">Número:</label>
+          <input type="text" class="form-control" name="numero" required>
+          <div class="invalid-feedback">Por favor informe o número de seu endereço.</div>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="bairro">Bairro:</label>
+          <input type="text" class="form-control" data-autocomplete-neighborhood name="bairro" id="bairro" required>
+          <div class="invalid-feedback">Por favor informe seu bairro.</div>
+        </div>
+
+        <div class="clear-fix">
+        <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+        </div>
+
+    </div>
+  </fieldset>
+</form>
+
+
+
+<!-- /Start your project here-->
+<!-- SCRIPTS -->
+<script>
+			$(function(){
+				$("#cep").autocompleteAddress();
+			});
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+$(document).ready(function(){
+  $('.date').mask('11/11/1111');
+  $('.cep').mask('00000-000');
+  $('.tel_ddd').mask('(00) 0000-0000');
+  $('.estado').mask('AA');
+  $('.cel').mask('(00) 00000-0000');
+  $('.time').mask('00:00');
+  $('.cpf').mask('000.000.000-00', {reverse: true});
+});
+</script>

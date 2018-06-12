@@ -5,7 +5,8 @@ const authMiddleware = require('./middlewares/auth');
 const guestMiddleware = require('./middlewares/guest');
 const loginController = require('./controllers/loginController');
 const dashboardController = require('./controllers/dashboardController');
-const cadastroController = require('./controllers/cadastroController');
+const membroController = require('./controllers/membroController');
+const celulaController = require('./controllers/celulaController');
 
 routes.use((req, res, next) => {
   res.locals.flashSuccess = req.flash('success');
@@ -31,7 +32,8 @@ routes.get('/app/dashboard', dashboardController.index);
 /**
  * Cadastros
  */
-routes.get('/app/modulos/pessoas', cadastroController.membros);
+routes.get('/app/modulos/pessoas', membroController.membros);
+routes.get('/app/modulos/celulas', celulaController.cadastro);
 
 /**
  * Paginas de Erro
