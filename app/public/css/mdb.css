@@ -4394,24 +4394,33 @@ a.waves-effect, a.waves-light {
   animation-name: slideOutUp; }
 
 .btn {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  padding: 0.84rem 2.14rem;
-  font-size: 0.81rem;
+  padding: 8px 18px;
+  font-size: 14px;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  margin: 0.375rem;
+  margin-bottom: 5px;
   border: 0;
   -webkit-border-radius: 0.125rem;
-  border-radius: 0.125rem;
+  border-radius: 5px;
   cursor: pointer;
-  text-transform: uppercase;
+  text-transform: none;
   white-space: normal;
   word-wrap: break-word;
-  color: #fff; }
+  color: #fff;
+}
+.btn-right{
+  float: right;
+  margin-left: 3px;
+  margin-right: 0;
+}
   .btn:hover, .btn:active, .btn:focus {
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);

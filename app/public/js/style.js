@@ -30,20 +30,21 @@ $(document).ready(function(e) {
 
 //Nav current active
 $(document).ready(function(e) {
- function setNavigation() {
-      var path = "http://" + window.location.hostname + window.location.pathname;
-      path = path.replace(/\/$/, "");
-      path = decodeURIComponent(path);
+  function setNavigation() {
+       var path = "http://" + window.location.hostname + window.location.pathname;
+       path = path.replace(/\/$/, "");
+       path = decodeURIComponent(path);
 
-      $("#leftside-navigation a").each(function () {
-          var href = this.href;
-          if (path.trim() == href.trim()) {
-              $(this).closest('a').addClass('current');
-          }
-      });
-  }
-  setNavigation();
+       $("#leftside-navigation a").each(function () {
+           var href = this.href;
+           if (path.trim() == href.trim()) {
+               $(this).closest('a').addClass('current');
+           }
+       });
+   }
+   setNavigation();
 });
+
 
 $(document).ready(function(){
 	$("#btn-toggle-not").click(function(){

@@ -6,7 +6,7 @@
 
           <div class="form-group col-md-4">
             <label for="lider">Líder Principal:</label>
-            <select name="ldier" class="form-control" required>
+            <select name="lider" class="form-control" required>
               <option value="" disabled selected>Selecione</option>
               <option value="usuarioId">Henry Junior</option>
               <option value="usuarioId">Christian Max</option>
@@ -33,8 +33,6 @@
             </select>
             <div class="invalid-feedback">Por favor escolha um supervisor.</div>
           </div>
-
-
 
         </div>
 
@@ -69,13 +67,13 @@
 
         <div class="form-group col-md-2">
           <label for="horario">Horário:</label>
-          <input type="text" class="form-control time" name="horario">
-          <div class="invalid-feedback">Por favor digite seu CPF.</div>
+          <input type="text" class="form-control time" name="horario" requireds>
+          <div class="invalid-feedback">Por favor informe o horário.</div>
         </div>
 
         <div class="form-group col-md-4">
           <label for="nome">Nome da Célula:</label>
-          <input type="nome" class="form-control" name="nome">
+          <input type="nome" class="form-control" name="nome" required>
           <div class="invalid-feedback">Por favor informe o nome da célula.</div>
         </div>
 
@@ -120,12 +118,11 @@
           <input type="text" class="form-control" data-autocomplete-neighborhood name="bairro" id="bairro" required>
           <div class="invalid-feedback">Por favor informe seu bairro.</div>
         </div>
+      </div>
 
-        <div class="clear-fix">
-        <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
-        </div>
+        <div class="clear"></div>
+        <button type="submit" class="btn btn-right btn-default">Salvar</button>
 
-    </div>
   </fieldset>
 </form>
 
