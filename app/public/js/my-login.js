@@ -12,7 +12,7 @@ $(function() {
 			html: 'mostrar',
 			class: 'btn btn-primary btn-sm',
 			id: 'passeye-toggle-'+i,
-			style: 'position:absolute;right:10px;top:35%;transform:translate(0,-50%);padding: 2px 8px;font-size:11px;cursor:pointer;'
+			style: 'position:absolute;right:10px;top:50%;transform:translate(0,-50%);padding: 2px 8px;font-size:11px;cursor:pointer;'
 		}));
 		$this.after($("<input/>", {
 			type: 'hidden',
