@@ -12,11 +12,5 @@ module.exports = (sequelize, DataTypes) => {
     bairro: DataTypes.STRING,
   });
 
-  Celula.associate = (models) => {
-    Celula.belongsTo(models.regiao);
-    Celula.belongsTo(models.membro);
-    Celula.belongsTo(models.tiposcelula);
-  };
-
   return Celula;
 };

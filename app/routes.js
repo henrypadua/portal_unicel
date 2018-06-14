@@ -32,6 +32,8 @@ routes.get('/app/dashboard', dashboardController.index);
 /**
  * Cadastros
  */
+routes.post('/app/modulos/pessoas/create', membroController.cadastro);
+
 routes.get('/app/modulos/pessoas', membroController.membros);
 routes.get('/app/modulos/celulas', celulaController.cadastro);
 

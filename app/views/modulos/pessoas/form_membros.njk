@@ -1,20 +1,22 @@
-<form class="needs-validation" novalidate>
+<form method="post" action="/app/modulos/pessoas/create" class="needs-validation" novalidate>
   <fieldset>
     <legend>Dados Pessoais</legend>
       <div class="form-row">
         <div class="form-group col-md-2">
-           <label for="tipo">Tipo:</label>
-             <select name="tipo" class="form-control" required>
-               <option value="" disabled selected>Selecione</option>
-               <option value="1">Membro</option>
-               <option value="2">Visitante</option>
+           <label for="tipomembroId">Tipo:</label>
+             <select name="tipomembroId" class="form-control">
+               {% for membro in membros %}
+              <option value="" disabled selected>Selecione</option>
+              <option value="josé">{{ membro.nome }}</option>
+                {% endfor %}
             </select>
+
             <div class="invalid-feedback">Por favor escolha um tipo.</div>
         </div>
 
         <div class="form-group col-md-2">
-           <label for="celula">Célula:</label>
-             <select name="celula" class="form-control" required>
+           <label for="celulaId">Célula:</label>
+             <select name="celulaId" class="form-control" required>
                <option value="" disabled selected>Selecione</option>
                <option value="1">C.I.A</option>
                <option value="2">Maranata</option>
@@ -38,7 +40,7 @@
 
       <div class="form-row">
         <div class="form-group col-md-2">
-          <label for="email">Data de Nascimento:</label>
+          <label for="dtnascimento">Data de Nascimento:</label>
           <input type="date" class="form-control" name="dtnascimento" required>
           <div class="invalid-feedback">Por favor informe sua data de nascimento.</div>
         </div>
@@ -88,8 +90,8 @@
      <div class="form-row">
 
        <div class="form-group col-md-4">
-          <label for="discipulador">Discipulador:</label>
-            <select name="discipulador" class="form-control" required>
+          <label for="discipuladorId">Discipulador:</label>
+            <select name="discipuladorId" class="form-control" required>
               <option value="" disabled selected>Selecione</option>
               <option value="1">Não tenho</option>
               <option value="2">Henry</option>
@@ -99,12 +101,12 @@
         </div>
 
        <div class="form-group col-md-4">
-          <label for="respvisitante">Responsável pelo Visitante:</label>
-            <select name="respvisitante" class="form-control" required>
+          <label for="respvisitanteId">Responsável pelo Visitante:</label>
+            <select name="respvisitanteId" class="form-control">
               <option value="" disabled selected>Selecione</option>
-              <option value="1">João</option>
-              <option value="2">Henry</option>
-              <option value="3">Gilvando</option>
+              {% for membro in membros %}
+              <option>{{ membro.nome }}</option>
+              {% endfor %}
             </select>
           <div class="invalid-feedback">Por favor escolha um responsável.</div>
         </div>

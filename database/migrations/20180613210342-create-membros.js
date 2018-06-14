@@ -18,10 +18,10 @@ module.exports = {
         allowNull: false,
       },
       DiscipuladorId: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
       },
       RespvisitanteId: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
       },
       nome: {
         allowNull: false,

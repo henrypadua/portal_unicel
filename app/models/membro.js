@@ -1,5 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
   const Membro = sequelize.define('Membro', {
+    tipomembroId: DataTypes.INTEGER,
+    celulaId: DataTypes.INTEGER,
+    discipuladorId: DataTypes.INTEGER,
+    respvisitanteId: DataTypes.INTEGER,
     nome: DataTypes.STRING,
     email: DataTypes.STRING,
     dtnascimento: DataTypes.DATE,
@@ -9,13 +13,14 @@ module.exports = (sequelize, DataTypes) => {
     telefone: DataTypes.STRING,
     celular: DataTypes.STRING,
     foto: DataTypes.STRING,
+    cep: DataTypes.INTEGER,
+    estado: DataTypes.STRING,
+    cidade: DataTypes.STRING,
+    logradouro: DataTypes.STRING,
+    numero: DataTypes.INTEGER,
+    complemento: DataTypes.STRING,
+    bairro: DataTypes.STRING,
   });
-
-  Membro.associate = (models) => {
-    Membro.belongsTo(models.regiao);
-    Membro.belongsTo(models.membro);
-    Membro.belongsTo(models.tiposmembro);
-  };
 
   return Membro;
 };
