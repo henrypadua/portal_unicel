@@ -7,33 +7,21 @@ module.exports = {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      Tipo_membroId: {
+      TipomembroId: {
         type: DataTypes.INTEGER,
-        references: { model: 'Tiposmembro', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
+        references: { model: 'Tipos_membro', key: 'id' },
         allowNull: false,
       },
       CelulaId: {
         type: DataTypes.INTEGER,
-        references: { model: 'Celulas', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
+        references: { model: 'Celula', key: 'id' },
         allowNull: false,
       },
       DiscipuladorId: {
-        type: DataTypes.INTEGER,
-        references: { model: 'Membros', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
-        allowNull: false,
+        type: DataTypes.STRING,
       },
-      Resp_visitanteId: {
-        type: DataTypes.INTEGER,
-        references: { model: 'Membros', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
-        allowNull: false,
+      RespvisitanteId: {
+        type: DataTypes.STRING,
       },
       nome: {
         allowNull: false,
