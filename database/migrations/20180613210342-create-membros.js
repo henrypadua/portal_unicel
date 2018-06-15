@@ -9,16 +9,15 @@ module.exports = {
       },
       TipomembroId: {
         type: DataTypes.INTEGER,
-        references: { model: 'Tipos_membro', key: 'id' },
         allowNull: false,
       },
       CelulaId: {
         type: DataTypes.INTEGER,
-        references: { model: 'Celula', key: 'id' },
         allowNull: false,
       },
       DiscipuladorId: {
         type: DataTypes.INTEGER,
+        allowNull: false,
       },
       RespvisitanteId: {
         type: DataTypes.INTEGER,
@@ -46,7 +45,7 @@ module.exports = {
       },
       cpf: {
         allowNull: true,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       telefone: {
         allowNull: true,

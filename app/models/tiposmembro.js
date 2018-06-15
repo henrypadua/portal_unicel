@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
-  const TiposMembro = sequelize.define('TiposMembro', {
+  const Tiposmembro = sequelize.define('Tiposmembro', {
     nome: DataTypes.STRING,
   });
 
-  return TiposMembro;
+  return Tiposmembro;
 };

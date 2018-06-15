@@ -7,6 +7,7 @@ const loginController = require('./controllers/loginController');
 const dashboardController = require('./controllers/dashboardController');
 const membroController = require('./controllers/membroController');
 const celulaController = require('./controllers/celulaController');
+const tiposController = require('./controllers/tiposController');
 
 routes.use((req, res, next) => {
   res.locals.flashSuccess = req.flash('success');
@@ -33,9 +34,13 @@ routes.get('/app/dashboard', dashboardController.index);
  * Cadastros
  */
 routes.post('/app/modulos/pessoas/create', membroController.cadastro);
-
 routes.get('/app/modulos/pessoas', membroController.membros);
-routes.get('/app/modulos/celulas', celulaController.cadastro);
+
+routes.post('/app/modulos/celulas/create', celulaController.cadastro);
+routes.get('/app/modulos/celulas', celulaController.celulas);
+
+routes.get('/app/modulos/pessoas', tiposController.tiposmembros);
+
 
 /**
  * Paginas de Erro

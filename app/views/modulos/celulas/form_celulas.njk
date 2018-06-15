@@ -5,8 +5,8 @@
     <div class="form-row">
 
       <div class="form-group col-md-2">
-        <label for="regiao">Região: </label>
-        <select name="regiao" class="form-control" required>
+        <label for="regiaoId">Região: </label>
+        <select name="regiaoId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
           <option value="regiaId">Laranja</option>
           <option value="regiaId">Azul</option>
@@ -17,8 +17,8 @@
       </div>
 
       <div class="form-group col-md-2">
-        <label for="tpcelula">Tipo de Célula:</label>
-        <select name="tpcelula" class="form-control" required>
+        <label for="tipocelulaId">Tipo de Célula:</label>
+        <select name="tipocelulaId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
           <option value="tipocelulaId">Jovens</option>
           <option value="tipocelulaId">Crianças</option>
@@ -29,12 +29,12 @@
       </div>
 
       <div class="form-group col-md-4">
-        <label for="anfitriao">Anfitrião:</label>
-        <select name="anfitriao" class="form-control" required>
+        <label for="anfitriaoId">Anfitrião:</label>
+        <select name="anfitriaoId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
-          <option value="membroId">Henry</option>
-          <option value="membroId">Edson</option>
-          <option value="membroId">Gilvando</option>
+            {% for membro in membros %}
+              <option value="{{ membro.id }}">{{ membro.nome }}</option>
+            {% endfor %}
         </select>
         <div class="invalid-feedback">Por favor escolha um tipo de célula.</div>
       </div>

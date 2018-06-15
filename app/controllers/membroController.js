@@ -1,4 +1,3 @@
-
 const { Membro } = require('../models');
 
 module.exports = {
@@ -36,5 +35,4 @@ module.exports = {
       return next(err);
     }
   },
-
 };
