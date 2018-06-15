@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
-  const TiposCelula = sequelize.define('Tipos_celula', {
+  const Tiposcelula = sequelize.define('Tiposcelula', {
     nome: DataTypes.STRING,
   });
 
-  return TiposCelula;
+  return Tiposcelula;
 };
