@@ -6,8 +6,9 @@
            <label for="tipomembroId">Tipo:</label>
              <select name="tipomembroId" class="form-control">
                 <option value="" disabled selected>Selecione</option>
-                <option value="1">Membros</option>
-                <option value="1">Visitantes</option>
+            {% for tiposmembro in tiposmembros %}
+              <option value="{{ tiposmembro.id }}">{{ tiposmembro.nome }}</option>
+            {% endfor %}
             </select>
 
             <div class="invalid-feedback">Por favor escolha um tipo.</div>
@@ -15,11 +16,11 @@
 
         <div class="form-group col-md-2">
            <label for="celulaId">Célula:</label>
-             <select name="celulaId" class="form-control" required>
+             <select name="celulaId" class="form-control">
                <option value="" disabled selected>Selecione</option>
-               <option value="1">C.I.A</option>
-               <option value="2">Maranata</option>
-               <option value="3">Metanóia</option>
+            {% for celula in celulas %}
+              <option value="{{ celula.id }}">{{ celula.nome }}</option>
+            {% endfor %}
             </select>
             <div class="invalid-feedback">Por favor escola uma célula.</div>
         </div>
@@ -125,19 +126,19 @@
 
         <div class="form-group col-md-2">
           <label for="estado">Estado:</label>
-          <input type="text" class="form-control estado" data-autocomplete-state name="estado" id="estado" required>
+          <input type="text" class="form-control estado" data-autocomplete-state name="estado" id="estado" readonly required>
           <div class="invalid-feedback">Por favor informe seu estado.</div>
         </div>
 
         <div class="form-group col-md-3">
           <label for="cidade">Cidade:</label>
-          <input type="text" class="form-control" data-autocomplete-city name="cidade" id="cidade" required>
+          <input type="text" class="form-control" data-autocomplete-city name="cidade" id="cidade" readonly required>
           <div class="invalid-feedback">Por favor informe sua cidade.</div>
         </div>
 
         <div class="form-group col-md-5">
           <label for="logradouro">Logradouro:</label>
-          <input type="text" class="form-control" data-autocomplete-address name="logradouro" id="endereco" required>
+          <input type="text" class="form-control" data-autocomplete-address name="logradouro" id="endereco" readonly required>
           <div class="invalid-feedback">Por favor informe seu endereço.</div>
         </div>
 
@@ -149,7 +150,7 @@
 
         <div class="form-group col-md-2">
           <label for="bairro">Bairro:</label>
-          <input type="text" class="form-control" data-autocomplete-neighborhood name="bairro" id="bairro" required>
+          <input type="text" class="form-control" data-autocomplete-neighborhood name="bairro" id="bairro" readonly required>
           <div class="invalid-feedback">Por favor informe seu bairro.</div>
         </div>
 

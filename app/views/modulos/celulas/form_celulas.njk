@@ -70,8 +70,8 @@
     <div class="form-row">
 
       <div class="form-group col-md-3">
-        <label for="lider">Líder Principal:</label>
-        <select name="lider" class="form-control" required>
+        <label for="liderId">Líder Principal:</label>
+        <select name="liderId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -81,8 +81,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="lidertr1">Líder em Treinamento 1:</label>
-        <select name="lidertr1" class="form-control" required>
+        <label for="lidertreinamento1Id">Líder em Treinamento 1:</label>
+        <select name="lidertreinamento1Id" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -92,8 +92,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="lidertr2">Líder em Treinamento 2:</label>
-        <select name="lidertr2" class="form-control" required>
+        <label for="lidertreinamento2Id">Líder em Treinamento 2:</label>
+        <select name="lidertreinamento2Id" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -103,8 +103,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="lidertr3">Líder em Treinamento 3:</label>
-        <select name="lidertr3" class="form-control" required>
+        <label for="lidertreinamento3Id">Líder em Treinamento 3:</label>
+        <select name="lidertreinamento3Id" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -114,8 +114,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="lidertr4">Líder em Treinamento 4:</label>
-        <select name="lidertr4" class="form-control" required>
+        <label for="lidertreinamento4Id">Líder em Treinamento 4:</label>
+        <select name="lidertreinamento4Id" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -125,8 +125,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="supervisor">Supervisor:</label>
-        <select name="supervisor" class="form-control" required>
+        <label for="supervisorId">Supervisor:</label>
+        <select name="supervisorId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -136,8 +136,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="secretario">Secretário:</label>
-        <select name="secretario" class="form-control" required>
+        <label for="secretarioId">Secretário:</label>
+        <select name="secretarioId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -147,8 +147,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="intercessor">Intercessor:</label>
-        <select name="intercessor" class="form-control" required>
+        <label for="intercessorId">Intercessor:</label>
+        <select name="intercessorId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -158,8 +158,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="respcom">Responsavél pela Comunhão:</label>
-        <select name="respcom" class="form-control" required>
+        <label for="respcomId">Responsavél pela Comunhão:</label>
+        <select name="respcomId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -169,8 +169,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="resporg">Responsavél pela Organização:</label>
-        <select name="resporg" class="form-control" required>
+        <label for="resporgId">Responsavél pela Organização:</label>
+        <select name="resporgId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -180,8 +180,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="resplouv">Responsavél pela Louvor:</label>
-        <select name="resplouv" class="form-control" required>
+        <label for="resplouvId">Responsavél pela Louvor:</label>
+        <select name="resplouvId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -191,8 +191,8 @@
       </div>
 
       <div class="form-group col-md-3">
-        <label for="respdina">Responsavél pela Dinâmica:</label>
-        <select name="respdina" class="form-control" required>
+        <label for="respdimId">Responsavél pela Dinâmica:</label>
+        <select name="respdimId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
@@ -258,7 +258,6 @@
 
 
 
-<!-- /Start your project here-->
 <!-- SCRIPTS -->
 <script>
   $(function () {

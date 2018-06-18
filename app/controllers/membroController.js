@@ -1,4 +1,7 @@
 const { Membro } = require('../models');
+const { Celula } = require('../models');
+const { Tiposmembro } = require('../models');
+
 
 module.exports = {
   async cadastro(req, res, next) {
@@ -27,9 +30,19 @@ module.exports = {
         order: [['nome', 'ASC']],
       });
 
+      const tiposmembros = await Tiposmembro.findAll({
+        order: [['nome', 'ASC']],
+      });
+
+      const celulas = await Celula.findAll({
+        order: [['nome', 'ASC']],
+      });
+
       return res.render('modulos/pessoas/membros', {
         tela: 'Pessoas',
         membros,
+        tiposmembros,
+        celulas,
       });
     } catch (err) {
       return next(err);

@@ -43,7 +43,7 @@ module.exports = {
       });
 
       return res.render('modulos/celulas/cadastro', {
-        tela: 'celulas',
+        tela: 'Cadastro',
         celulas,
         membros,
         tiposcelulas,
