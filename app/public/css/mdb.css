@@ -1370,7 +1370,7 @@ button.bg-danger:focus {
   border-color: #ff3547 !important; }
 
 .bg-warning {
-  background-color: #ff8800 !important; }
+  background-color:#ffc107!important; }
 
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
@@ -1378,7 +1378,7 @@ button.bg-warning:focus {
   background-color: #cc6d00 !important; }
 
 .border-warning {
-  border-color: #ff8800 !important; }
+  border-color: #ffc107 !important; }
 
 .bg-success {
   background-color: #00c851 !important; }
