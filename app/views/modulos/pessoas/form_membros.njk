@@ -3,37 +3,36 @@
     <legend>Dados Pessoais</legend>
       <div class="form-row">
         <div class="form-group col-md-2">
-           <label for="tipomembroId">Tipo:</label>
-             <select name="tipomembroId" class="form-control">
-                <option value="" disabled selected>Selecione</option>
-            {% for tiposmembro in tiposmembros %}
+          <label for="tipomembroId">Tipo:</label>
+            <select name="tipomembroId" class="form-control">
+              <option value="" disabled selected>Selecione</option>
+              {% for tiposmembro in tiposmembros %}
               <option value="{{ tiposmembro.id }}">{{ tiposmembro.nome }}</option>
-            {% endfor %}
+              {% endfor %}
             </select>
-
-            <div class="invalid-feedback">Por favor escolha um tipo.</div>
+          <div class="invalid-feedback">Por favor escolha um tipo.</div>
         </div>
 
         <div class="form-group col-md-2">
-           <label for="celulaId">Célula:</label>
-             <select name="celulaId" class="form-control">
-               <option value="" disabled selected>Selecione</option>
-            {% for celula in celulas %}
+          <label for="celulaId">Célula:</label>
+            <select name="celulaId" class="form-control">
+              <option value="" disabled selected>Selecione</option>
+              {% for celula in celulas %}
               <option value="{{ celula.id }}">{{ celula.nome }}</option>
-            {% endfor %}
+              {% endfor %}
             </select>
-            <div class="invalid-feedback">Por favor escola uma célula.</div>
+          <div class="invalid-feedback">Por favor escola uma célula.</div>
         </div>
 
         <div class="form-group col-md-4">
           <label for="nome">Nome:</label>
-          <input type="text" class="form-control" name="nome" required>
+            <input type="text" class="form-control" name="nome" required>
           <div class="invalid-feedback">Por favor informe seu nome.</div>
         </div>
 
         <div class="form-group col-md-4">
           <label for="email">E-mail:</label>
-          <input type="email" class="form-control" name="email" required>
+            <input type="email" class="form-control" name="email" required>
           <div class="invalid-feedback">Por favor informe seu email.</div>
         </div>
       </div>
@@ -41,7 +40,7 @@
       <div class="form-row">
         <div class="form-group col-md-2">
           <label for="dtnascimento">Data de Nascimento:</label>
-          <input type="date" class="form-control" name="dtnascimento" required>
+            <input type="date" class="form-control" name="dtnascimento" required>
           <div class="invalid-feedback">Por favor informe sua data de nascimento.</div>
         </div>
 
@@ -57,152 +56,141 @@
 
         <div class="form-group col-md-2">
           <label for="estadocivil">Estado Civil:</label>
-          <select name="estadocivil" class="form-control" required>
-            <option value="" disabled selected>Selecione</option>
-            <option value="1">Solteiro(a)</option>
-            <option value="2">Casado(a)</option>
-            <option value="3">Divorciado(a)</option>
-            <option value="4">Viuvo(a)</option>
-            <option value="5">União Estável</option>
-          </select>
+            <select name="estadocivil" class="form-control" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="1">Solteiro(a)</option>
+              <option value="2">Casado(a)</option>
+              <option value="3">Divorciado(a)</option>
+              <option value="4">Viuvo(a)</option>
+              <option value="5">União Estável</option>
+            </select>
           <div class="invalid-feedback">Por favor escolha seu estado civil.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="cpf">CPF:</label>
-          <input type="text" class="form-control cpf" name="cpf">
+            <input type="text" class="form-control cpf" name="cpf">
           <div class="invalid-feedback">Por favor informe seu CPF.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="telefone">Telefone:</label>
-          <input type="tel" class="form-control tel_ddd" name="telefone">
+            <input type="tel" class="form-control tel_ddd" name="telefone">
           <div class="invalid-feedback">Por favor informe seu telefone.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="celular">Celular:</label>
-          <input type="tel" class="form-control cel" name="celular" required>
+            <input type="tel" class="form-control cel" name="celular" required>
           <div class="invalid-feedback">Por favor informe seu celular.</div>
         </div>
-     </div>
+      </div>
 
-     <div class="form-row">
-
-       <div class="form-group col-md-4">
+      <div class="form-row">
+        <div class="form-group col-md-4">
           <label for="discipuladorId">Discipulador:</label>
             <select name="discipuladorId" class="form-control" required>
               <option value="" disabled selected>Selecione</option>
-            {% for membro in membros %}
+              {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
-            {% endfor %}
+              {% endfor %}
             </select>
           <div class="invalid-feedback">Por favor escolha seu discipulador.</div>
         </div>
 
-       <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="respvisitanteId">Responsável pelo Visitante:</label>
             <select name="respvisitanteId" class="form-control">
               <option value="" disabled selected>Selecione</option>
-            {% for membro in membros %}
+              {% for membro in membros %}
               <option value="{{ membro.id }}">{{ membro.nome }}</option>
-            {% endfor %}
+              {% endfor %}
             </select>
           <div class="invalid-feedback">Por favor escolha um responsável.</div>
         </div>
-
-     </div>
+      </div>
   </fieldset>
 
   <fieldset>
     <legend>Endereço</legend>
-
       <div class="form-row">
         <div class="form-group col-md-2">
           <label for="cep">Cep:</label>
-          <input type="tex" class="form-control cep" name="cep" id="cep" required>
+            <input type="tex" class="form-control cep" name="cep" id="cep" required>
           <div class="invalid-feedback">Por favor informe seu CEP.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="estado">Estado:</label>
-          <input type="text" class="form-control estado" data-autocomplete-state name="estado" id="estado" readonly required>
+            <input type="text" class="form-control estado" data-autocomplete-state name="estado" id="estado" readonly required>
           <div class="invalid-feedback">Por favor informe seu estado.</div>
         </div>
 
         <div class="form-group col-md-3">
           <label for="cidade">Cidade:</label>
-          <input type="text" class="form-control" data-autocomplete-city name="cidade" id="cidade" readonly required>
+            <input type="text" class="form-control" data-autocomplete-city name="cidade" id="cidade" readonly required>
           <div class="invalid-feedback">Por favor informe sua cidade.</div>
         </div>
 
         <div class="form-group col-md-5">
           <label for="logradouro">Logradouro:</label>
-          <input type="text" class="form-control" data-autocomplete-address name="logradouro" id="endereco" readonly required>
+            <input type="text" class="form-control" data-autocomplete-address name="logradouro" id="endereco" readonly required>
           <div class="invalid-feedback">Por favor informe seu endereço.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="numero">Número:</label>
-          <input type="text" class="form-control" name="numero" required>
+            <input type="text" class="form-control" name="numero" required>
           <div class="invalid-feedback">Por favor informe o número de seu endereço.</div>
         </div>
 
         <div class="form-group col-md-2">
           <label for="bairro">Bairro:</label>
-          <input type="text" class="form-control" data-autocomplete-neighborhood name="bairro" id="bairro" readonly required>
+            <input type="text" class="form-control" data-autocomplete-neighborhood name="bairro" id="bairro" readonly required>
           <div class="invalid-feedback">Por favor informe seu bairro.</div>
         </div>
 
         <div class="form-group col-md-4">
           <label for="complemento">Complemento:</label>
-          <input type="text" class="form-control" name="complemento">
+            <input type="text" class="form-control" name="complemento">
         </div>
-    </div>
+      </div>
 
-        <div class="clear"></div>
-        <button type="submit" class="btn btn-right btn-primary">Salvar</button>
+      <div class="clear"></div>
+      <button type="submit" class="btn btn-right btn-primary">Salvar</button>
   </fieldset>
 
-   <fieldset>
-     <legend>Listagem</legend>
-     <table class="table table-hover table-responsive-md mb-0">
-      <thead>
-         <tr>
-           <th class="th-lg">Cód.</th>
-           <th class="th-lg">Nome</th>
-           <th class="th-lg">Cpf</th>
-           <th class="th-lg">E-mail</th>
-           <th class="th-lg">Celular</th>
-           <th class="th-lg">Edit</th>
-           <th class="th-lg">Del</th>
-         </tr>
-         <tbody>
-          {% for membro in membros %}
-            <tr>
-              <td>{{membro.id}}</td>
-              <td>{{membro.nome}}</td>
-              <td>{{membro.cpf}}</td>
-              <td>{{membro.email}}</td>
-              <td>{{membro.celular}}</td>
-              <td><button class="btn btn-primary"><i class="fas fa-user-edit"></i></td></button>
-              <td><button class="btn btn-danger"><i class="far fa-trash-alt"></i></td></button>
-            <tr>
-          {% endfor %}
-      </thead>
-     </table>
-
-
-
-
-
-   </fieldset>
-
+  <fieldset>
+    <legend>Listagem</legend>
+      <table class="table table-hover table-responsive-md mb-0">
+        <thead>
+          <tr>
+            <th class="th-lg">Cód.</th>
+            <th class="th-lg">Nome</th>
+            <th class="th-lg">Cpf</th>
+            <th class="th-lg">E-mail</th>
+            <th class="th-lg">Celular</th>
+            <th class="th-lg">Edit</th>
+            <th class="th-lg">Del</th>
+          </tr>
+          <tbody>
+            {% for membro in membros %}
+              <tr>
+                <td>{{membro.id}}</td>
+                <td>{{membro.nome}}</td>
+                <td>{{membro.cpf}}</td>
+                <td>{{membro.email}}</td>
+                <td>{{membro.celular}}</td>
+                <td><button class="btn btn-primary"><i class="fas fa-user-edit"></i></td></button>
+                <td><button class="btn btn-danger"><i class="far fa-trash-alt"></i></td></button>
+              <tr>
+            {% endfor %}
+        </thead>
+      </table>
+  </fieldset>
 </form>
 
 
-
-<!-- /Start your project here-->
 <!-- SCRIPTS -->
 <script>
 			$(function(){
