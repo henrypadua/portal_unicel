@@ -1,0 +1,28 @@
+<fieldset>
+    <legend>Listagem</legend>
+      <table class="table table-hover table-responsive-md mb-0">
+        <thead>
+          <tr>
+            <th class="th-lg">Cód.</th>
+            <th class="th-lg">Nome</th>
+            <th class="th-lg">Cpf</th>
+            <th class="th-lg">E-mail</th>
+            <th class="th-lg">Celular</th>
+            <th class="th-lg">Edit</th>
+            <th class="th-lg">Del</th>
+          </tr>
+          <tbody>
+            {% for membro in membros %}
+              <tr>
+                <td>{{membro.id}}</td>
+                <td>{{membro.nome}}</td>
+                <td>{{membro.cpf}}</td>
+                <td>{{membro.email}}</td>
+                <td>{{membro.celular}}</td>
+                <td><button class="btn btn-primary"><i class="fas fa-user-edit"></i></td></button>
+                <td><button class="btn btn-danger"><i class="far fa-trash-alt"></i></td></button>
+              <tr>
+            {% endfor %}
+        </thead>
+      </table>
+  </fieldset>
