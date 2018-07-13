@@ -8,19 +8,25 @@ module.exports = {
         type: DataTypes.INTEGER,
       },
       TipomembroId: {
-        type: DataTypes.INTEGER,
         allowNull: false,
+        type: DataTypes.INTEGER,
+        references: { model: 'Tiposmembros', key: 'Id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       CelulaId: {
+        allowNull: false,
         type: DataTypes.INTEGER,
+        references: { model: 'Celulas', key: 'Id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
+      Discipulador: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
-      DiscipuladorId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      RespvisitanteId: {
-        type: DataTypes.INTEGER,
+      Respvisitante: {
+        type: DataTypes.STRING,
       },
       nome: {
         allowNull: false,
@@ -37,11 +43,11 @@ module.exports = {
       },
       sexo: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       estadocivil: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       cpf: {
         allowNull: true,

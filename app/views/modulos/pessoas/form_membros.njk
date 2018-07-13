@@ -88,8 +88,8 @@
 
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="discipuladorId">Discipulador:</label>
-            <select name="discipuladorId" class="form-control">
+          <label for="discipulador">Discipulador:</label>
+            <select name="discipulador" class="form-control">
               <option value="" disabled selected>Selecione</option>
               {% for membro in membros %}
               <option value="{{ membro.nome }}">{{ membro.nome }}</option>
@@ -99,11 +99,11 @@
         </div>
 
         <div class="form-group col-md-4">
-          <label for="respvisitanteId">Responsável pelo Visitante:</label>
-            <select name="respvisitanteId" class="form-control">
+          <label for="respvisitante">Responsável pelo Visitante:</label>
+            <select name="respvisitante" class="form-control">
               <option value="" disabled selected>Selecione</option>
               {% for membro in membros %}
-              <option value="{{ membro.id }}">{{ membro.nome }}</option>
+              <option value="{{ membro.nome }}">{{ membro.nome }}</option>
               {% endfor %}
             </select>
           <div class="invalid-feedback">Por favor escolha um responsável.</div>

@@ -1,7 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const Celula = sequelize.define('Celula', {
-    regiaoId: DataTypes.INTEGER,
-    tipocelulaId: DataTypes.INTEGER,
     anfitriaoId: DataTypes.INTEGER,
     nome: DataTypes.STRING,
     diasemana: DataTypes.INTEGER,
@@ -26,6 +24,12 @@ module.exports = (sequelize, DataTypes) => {
     complemento: DataTypes.STRING,
     bairro: DataTypes.STRING,
   });
+
+  Celula.associate = (models) => {
+    Celula.belongsTo(models.regiao);
+    Celula.belongsTo(models.tiposcelula);
+    Celula.hasmany(models.membro);
+  };
 
   return Celula;
 };

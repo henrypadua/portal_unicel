@@ -4,5 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     cor: DataTypes.STRING,
   });
 
+  Regiao.associate = (models) => {
+    Regiao.hasmany(models.celula);
+  };
+
   return Regiao;
 };

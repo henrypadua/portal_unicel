@@ -10,10 +10,17 @@ module.exports = {
       RegiaoId: {
         allowNull: false,
         type: DataTypes.INTEGER,
+        references: { model: 'Regiao', key: 'Id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       TipocelulaId: {
         allowNull: false,
         type: DataTypes.INTEGER,
+        references: { model: 'Tiposcelulas', key: 'Id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+
       },
       AnfitriaoId: {
         allowNull: false,
