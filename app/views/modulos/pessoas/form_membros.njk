@@ -89,7 +89,7 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="discipuladorId">Discipulador:</label>
-            <select name="discipuladorId" class="form-control" required>
+            <select name="discipuladorId" class="form-control">
               <option value="" disabled selected>Selecione</option>
               {% for membro in membros %}
               <option value="{{ membro.nome }}">{{ membro.nome }}</option>
