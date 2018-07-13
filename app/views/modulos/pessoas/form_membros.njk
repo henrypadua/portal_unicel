@@ -48,8 +48,8 @@
           <label for="sexo">Sexo:</label>
             <select name="sexo" class="form-control" required>
               <option value="" disabled selected>Selecione</option>
-              <option value="1">Masculino</option>
-              <option value="2">Feminino</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
             </select>
           <div class="invalid-feedback">Por favor escolha seu sexo.</div>
         </div>
@@ -58,11 +58,11 @@
           <label for="estadocivil">Estado Civil:</label>
             <select name="estadocivil" class="form-control" required>
               <option value="" disabled selected>Selecione</option>
-              <option value="1">Solteiro(a)</option>
-              <option value="2">Casado(a)</option>
-              <option value="3">Divorciado(a)</option>
-              <option value="4">Viuvo(a)</option>
-              <option value="5">União Estável</option>
+              <option value="Solteiro(a)">Solteiro(a)</option>
+              <option value="Casado(a)">Casado(a)</option>
+              <option value="Divorciado(a)">Divorciado(a)</option>
+              <option value=">Viuvo(a)">Viuvo(a)</option>
+              <option value="União Estável">União Estável</option>
             </select>
           <div class="invalid-feedback">Por favor escolha seu estado civil.</div>
         </div>
@@ -92,7 +92,7 @@
             <select name="discipuladorId" class="form-control" required>
               <option value="" disabled selected>Selecione</option>
               {% for membro in membros %}
-              <option value="{{ membro.id }}">{{ membro.nome }}</option>
+              <option value="{{ membro.nome }}">{{ membro.nome }}</option>
               {% endfor %}
             </select>
           <div class="invalid-feedback">Por favor escolha seu discipulador.</div>
