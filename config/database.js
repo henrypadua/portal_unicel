@@ -4,6 +4,7 @@ module.exports = {
   database: 'grupo602_portalunicel',
   host: 'kairospetro.com.br',
   dialect: 'mysql',
+  operatorsAliases: false,
 };
 // module.exports = {
 //   username: 'root',
