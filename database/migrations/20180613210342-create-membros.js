@@ -8,18 +8,18 @@ module.exports = {
         type: DataTypes.INTEGER,
       },
       TipomembroId: {
-        allowNull: false,
         type: DataTypes.INTEGER,
         references: { model: 'Tiposmembros', key: 'Id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
+        allowNull: false,
       },
       CelulaId: {
-        allowNull: false,
         type: DataTypes.INTEGER,
         references: { model: 'Celulas', key: 'Id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
+        allowNull: false,
       },
       Discipulador: {
         type: DataTypes.STRING,

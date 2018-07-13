@@ -8,19 +8,18 @@ module.exports = {
         type: DataTypes.INTEGER,
       },
       RegiaoId: {
-        allowNull: false,
         type: DataTypes.INTEGER,
-        references: { model: 'Regiao', key: 'Id' },
+        references: { model: 'Regioes', key: 'Id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
+        allowNull: false,
       },
       TipocelulaId: {
-        allowNull: false,
         type: DataTypes.INTEGER,
         references: { model: 'Tiposcelulas', key: 'Id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
-
+        allowNull: false,
       },
       AnfitriaoId: {
         allowNull: false,

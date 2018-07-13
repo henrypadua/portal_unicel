@@ -12,4 +12,5 @@ module.exports = {
   database: 'portalund',
   host: '127.0.0.1',
   dialect: 'mysql',
+  operatorsAliases: false,
 };
