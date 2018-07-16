@@ -8,7 +8,7 @@
         <label for="regiaoId">Região: </label>
         <select name="regiaoId" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
-            {% for regiao in regioes %}
+            {% for regiao in regiaos %}
               <option value="{{ regiao.id }}">{{ regiao.nome }}</option>
             {% endfor %}
         </select>

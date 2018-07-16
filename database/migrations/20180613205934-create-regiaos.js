@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, DataTypes) => {
-    queryInterface.createTable('Regioes', {
+    queryInterface.createTable('Regiaos', {
       id: {
         allowNull: false,
         autoIncrement: true,
