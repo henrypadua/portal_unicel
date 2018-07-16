@@ -16,8 +16,8 @@
       </div>
 
       <div class="form-group col-md-2">
-        <label for="tipocelulaId">Tipo de Célula:</label>
-        <select name="tipocelulaId" class="form-control" required>
+        <label for="tipocelula">Tipo de Célula:</label>
+        <select name="tipocelula" class="form-control" required>
           <option value="" disabled selected>Selecione</option>
             {% for tiposcelula in tiposcelulas %}
               <option value="{{ tiposcelula.id }}">{{ tiposcelula.nome }}</option>
