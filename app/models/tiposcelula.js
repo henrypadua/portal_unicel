@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Tiposcelula.associate = (models) => {
-    Tiposcelula.hasmany(models.celula);
+    Tiposcelula.hasMany(models.Celula);
   };
 
   return Tiposcelula;

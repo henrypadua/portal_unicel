@@ -23,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Membro.associate = (models) => {
-    Membro.belongsTo(models.celula);
-    Membro.belongsTo(models.tiposmembro);
+    Membro.belongsTo(models.Celula);
+    Membro.belongsTo(models.Tiposmembro);
   };
 
   return Membro;

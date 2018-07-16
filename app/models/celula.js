@@ -26,9 +26,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Celula.associate = (models) => {
-    Celula.belongsTo(models.regiao);
-    Celula.belongsTo(models.tiposcelula);
-    Celula.hasmany(models.membro);
+    Celula.belongsTo(models.Regiao);
+    Celula.belongsTo(models.Tiposcelula);
+    Celula.hasMany(models.Membro);
   };
 
   return Celula;

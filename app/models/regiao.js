@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Regiao.associate = (models) => {
-    Regiao.hasmany(models.celula);
+    Regiao.hasMany(models.Celula);
   };
 
   return Regiao;

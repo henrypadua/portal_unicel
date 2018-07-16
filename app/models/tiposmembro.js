@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Tiposmembro.associate = (models) => {
-    Tiposmembro.hasmany(models.membro);
+    Tiposmembro.hasMany(models.Membro);
   };
 
   return Tiposmembro;
