@@ -7,7 +7,7 @@ module.exports = {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      TipomembroId: {
+      TiposmembroId: {
         type: DataTypes.INTEGER,
         references: { model: 'Tiposmembros', key: 'Id' },
         onUpdate: 'CASCADE',

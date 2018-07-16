@@ -1,7 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const Membro = sequelize.define('Membro', {
-    tipomembroId: DataTypes.INTEGER,
-    celulaId: DataTypes.INTEGER,
     discipulador: DataTypes.STRING,
     respvisitante: DataTypes.STRING,
     nome: DataTypes.STRING,

@@ -3,8 +3,8 @@
     <legend>Dados Pessoais</legend>
       <div class="form-row">
         <div class="form-group col-md-2">
-          <label for="tipomembroId">Tipo:</label>
-            <select name="tipomembroId" class="form-control">
+          <label for="tiposmembroId">Tipo:</label>
+            <select name="tiposmembroId" class="form-control">
               <option value="" disabled selected>Selecione</option>
               {% for tiposmembro in tiposmembros %}
               <option value="{{ tiposmembro.id }}">{{ tiposmembro.nome }}</option>

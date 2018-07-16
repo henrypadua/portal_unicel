@@ -14,7 +14,7 @@ module.exports = {
         onDelete: 'CASCADE',
         allowNull: false,
       },
-      TipocelulaId: {
+      TiposcelulaId: {
         type: DataTypes.INTEGER,
         references: { model: 'Tiposcelulas', key: 'Id' },
         onUpdate: 'CASCADE',
