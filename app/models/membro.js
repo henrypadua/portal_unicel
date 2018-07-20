@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Membro = sequelize.define('Membro', {
+    tiposmembro: DataTypes.STRING,
     discipulador: DataTypes.STRING,
     respvisitante: DataTypes.STRING,
     nome: DataTypes.STRING,
@@ -22,7 +23,6 @@ module.exports = (sequelize, DataTypes) => {
 
   Membro.associate = (models) => {
     Membro.belongsTo(models.Celula);
-    Membro.belongsTo(models.Tiposmembro);
   };
 
   return Membro;

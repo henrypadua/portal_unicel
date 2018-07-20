@@ -1,7 +1,9 @@
-const { Celula } = require('../models');
-const { Membro } = require('../models');
-const { Tiposcelula } = require('../models');
-const { Regiao } = require('../models');
+const {
+  Celula,
+  Tiposcelula,
+  Membro,
+  Regiao,
+} = require('../models');
 
 module.exports = {
   async cadastro(req, res, next) {

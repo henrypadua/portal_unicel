@@ -3,12 +3,11 @@
     <legend>Dados Pessoais</legend>
       <div class="form-row">
         <div class="form-group col-md-2">
-          <label for="tiposmembroId">Tipo:</label>
-            <select name="tiposmembroId" class="form-control">
+          <label for="tiposmembro">Tipo:</label>
+            <select name="tiposmembro" class="form-control">
               <option value="" disabled selected>Selecione</option>
-              {% for tiposmembro in tiposmembros %}
-              <option value="{{ tiposmembro.id }}">{{ tiposmembro.nome }}</option>
-              {% endfor %}
+              <option value="Visitante">Visitante</option>
+              <option value="Membro">Membro</option>
             </select>
           <div class="invalid-feedback">Por favor escolha um tipo.</div>
         </div>
